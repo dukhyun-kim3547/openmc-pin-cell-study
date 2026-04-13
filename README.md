@@ -87,6 +87,27 @@ Full Westinghouse 17×17 assembly model with 264 fuel pins and 25 guide tubes.
 
 ---
 
+### 6. Depletion Analysis (`depletion.py`)
+Burnup simulation tracking fuel composition changes over ~3 years of operation.
+
+![Depletion Results](depletion_results.png)
+
+| Time (days) | k-infinity | U-235 remaining | Pu-239 produced |
+|-------------|------------|-----------------|-----------------|
+| 0 | ~1.35 | 100% | 0% |
+| 180 | ~1.23 | ~78% | ~8% |
+| 360 | ~1.10 | ~49% | ~15% |
+| ~1,100 | ~1.00 | — | — |
+| 1,080 | ~0.94 | ~17% | ~18% |
+| 2,160 | ~0.81 | ~3% | ~19% |
+
+**Key findings:**
+- k-infinity crosses 1.0 at ~1,100 days → defines fuel replacement cycle (~3 years)
+- Pu-239 saturates at ~18% of initial U-235 after ~500 days
+- Xe-135 rapidly reaches equilibrium → classic reactor poison effect
+
+---
+
 ## Key Physics Concepts Demonstrated
 
 - Monte Carlo eigenvalue calculation (k-infinity / k-effective)
