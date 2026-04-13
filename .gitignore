@@ -1,0 +1,5 @@
+# OpenMC auto-generated files
+*.xml
+*.h5
+*.png
+tallies.out
